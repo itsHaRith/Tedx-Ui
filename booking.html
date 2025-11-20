@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">TEDxBaghdad </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-mode rtl-mode">
+
+    <header>
+        <div class="logo">
+            <h1>TEDx<span class="red-text">Baghdad</span></h1>
+        </div>
+        <nav>
+            <ul id="main-nav">
+                <li><a href="aboutus.html" id="nav-about">من نحن</a></li>
+                <li><a href="booking.html" class="btn" id="nav-map">حجز بوث</a></li>
+                <li><a href="index.html#contact" id="nav-contact">الرئيسية</a></li>
+            </ul>
+        </nav>
+        
+        <div class="toggles">
+            <button id="lang-toggle" class="toggle-btn" title="Toggle Language">
+                <span id="current-lang">EN</span>
+            </button>
+            <button id="theme-toggle" class="toggle-btn" title="Toggle Dark/Light Mode">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <section id="map" class="section dark-bg">
+        <h2 id="map-heading">خارطة المعرض ونظام الحجز</h2>
+        <p id="map-subtitle">اضغط على البوث الذي ترغب في حجزه لتقديم طلب حجز أولي.</p>
+        
+        <div class="booth-map-placeholder">
+            <div class="exhibition-map">
+                <div class="booth-row top-row">
+                    <div class="booth diamond" id="booth-18" data-price="4000">18</div>
+                    <div class="booth diamond" id="booth-16" data-price="4000">16</div>
+                    <div class="booth diamond" id="booth-14" data-price="4000">14</div>
+                    <div class="booth diamond" id="booth-12" data-price="4000">12</div>
+                    <div class="booth gold" id="booth-10" data-price="3500">10</div>
+                    <div class="booth gold" id="booth-8" data-price="3500">8</div>
+                    <div class="booth gold" id="booth-6" data-price="3500">6</div>
+                    <div class="booth gold" id="booth-4" data-price="3500">4</div>
+                    <div class="booth silver" id="booth-2" data-price="3000">2</div>
+                </div>
+
+                <div class="aisle">ممر المعرض الرئيسي - Entrance</div>
+
+                <div class="booth-row bottom-row">
+                    <div class="booth diamond" id="booth-17" data-price="4000">17</div>
+                    <div class="booth diamond" id="booth-15" data-price="4000">15</div>
+                    <div class="booth diamond" id="booth-13" data-price="4000">13</div>
+                    <div class="booth diamond" id="booth-11" data-price="4000">11</div>
+                    <div class="booth gold" id="booth-9" data-price="3500">9</div>
+                    <div class="booth gold" id="booth-7" data-price="3500">7</div>
+                    <div class="booth gold" id="booth-5" data-price="3500">5</div>
+                    <div class="booth gold" id="booth-3" data-price="3500">3</div>
+                    <div class="booth silver" id="booth-1" data-price="3000">1</div>
+                </div>
+            </div>
+        </div>
+        
+        <p class="note" id="map-note">سيتم التواصل معك من قبل فريقنا لإكمال عملية الدفع والتأكيد.</p>
+        
+    </section>
+    
+    <section id="packages" class="section">
+        <h2 id="packages-heading">باقات الرعاية المتوفرة</h2>
+        <p id="packages-subtitle">صممنا حزم خاصة لتناسب علامتك التجارية.</p>
+
+        <div class="package-card standard-booth">
+            <h3 id="package1-title">بوث جاهز (Standard Booth)</h3>
+            <span class="price">$1500</span>
+            <ul id="package1-features">
+                <li>موقع مميز لجناحك في معرض تيدإكس بغداد.</li>
+                <li>بوث مجهز بالكامل (جاهز).</li>
+            </ul>
+        </div>
+        
+        <div class="package-card leadership">
+             <h3 id="package2-title">باقة الريادة (Leadership Package)</h3>
+             <span class="price">$5000</span>
+             <p id="package2-desc">مثالية للعلامة التجارية التي ترغب في التألق وترك بصمة لا تنسى.</p>
+             <a href="#" class="btn-secondary" id="package2-cta">عرض المزيد من التفاصيل</a>
+        </div>
+        
+        <div class="package-card media">
+             <h3 id="package3-title">باقة الإعلام (Media Package)</h3>
+             <span class="price">$4000</span>
+             <p id="package3-desc">عرض علامتك التجارية ضمن الحملة الإعلانية للمؤتمر لمدة شهرين.</p>
+             <a href="#" class="btn-secondary" id="package3-cta">عرض المزيد من التفاصيل</a>
+        </div>
+        
+    </section>
+
+    
+    <section id="contact-footer" class="section">
+        <h2 id="contact-heading-small">تواصل معنا مباشرة</h2>
+        <div class="contact-info">
+            <p id="contact-name-small"><strong>المهندسة سهاد الفرطوسي</strong> - المدير التنفيذي</p>
+            <p>📧 الإيميل: <a href="mailto:Suhad@tedxbaghdad.com">Suhad@tedxbaghdad.com</a></p>
+        </div>
+    </section>
+
+ <footer>
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <h3 id="footer-links-global">الشبكة العالمية</h3>
+            <ul>
+                <li><a href="https://www.ted.com" target="_blank">TED العالمية</a></li>
+                <li><a href="https://www.ted.com/tedx/events/tedxbaghdad" target="_blank">صفحة TEDx بغداد العالمية</a></li>
+                <li><a href="https://tedxbaghdad.com/" target="_blank" id="footer-old-site">الأرشيف والموقع القديم</a></li> 
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3 id="footer-links-quick">روابط سريعة</h3>
+            <ul>
+                <li><a href="aboutus.html" id="footer-about">من نحن</a></li>
+                <li><a href="#packages" id="footer-packages">باقات الشراكة</a></li>
+                <li><a href="booking.html" id="footer-map-link">خارطة البوثات والحجز</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3 id="footer-links-contact">تواصل معنا</h3>
+            <div class="contact-footer-info">
+                <p><strong><span id="footer-director-name">المهندسة سهاد الفرطوسي</span></strong></p>
+                <p>📧 Suhad@tedxbaghdad.com</p>
+                <p>📱 +964 7716672222</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/TEDxBaghdad.Iraq/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/tedxbaghdad.iraq/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/user/TEDxBaghdad" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p id="footer-text">© 2025 TEDxBaghdad. كل الحقوق محفوظة.</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
