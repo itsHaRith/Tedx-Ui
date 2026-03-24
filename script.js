@@ -1,4 +1,3 @@
-// ====== قاموس الترجمة ======
 const elementsToTranslate = {
     pageTitle: { ar: "TEDxBaghdad", en: "TEDxBaghdad" },
     'nav-about': { ar: "من نحن", en: "About us" },
@@ -32,13 +31,13 @@ const elementsToTranslate = {
     'package3-desc': { ar: "عرض علامتك التجارية ضمن الحملة الإعلانية للمؤتمر لمدة شهرين.", en: "Showcase your brand in the conference's advertising campaign for two months." },
     'package3-cta': { ar: "عرض المزيد من التفاصيل", en: "View More Details" },
     'contact-heading': { ar: "تواصل معنا للشراكة", en: "Contact Us for Partnership" },
-    'contact-subtitle': { ar: "تواصل مع المدير التنفيذي لـ TEDxBaghdad لإتمام الشراكة:", en: "Contact the Executive Director of TEDxBaghdad to complete the partnership:" },
-    'contact-name': { ar: "<strong>المهندسة سهاد الفرطوسي</strong> - المدير التنفيذي", en: "<strong>Eng. Suhad Al-Fartousi</strong> - Executive Director" },
+    'contact-subtitle': { ar: "تواصل مع فريق TEDxBaghdad لإتمام الشراكة:", en: "Contact the TEDxBaghdad team to complete the partnership:" },
+    'contact-name': { ar: "<strong>فريق تيدإكس بغداد</strong> - قسم الشراكات", en: "<strong>TEDxBaghdad Team</strong> - Partnerships Department" },
     'map-heading': { ar: "خارطة المعرض ونظام الحجز", en: "Exhibition Map & Booking System" },
     'map-subtitle': { ar: "اضغط على البوث الذي ترغب في حجزه لتقديم طلب حجز أولي.", en: "Click on the booth you wish to reserve to submit an initial booking request." },
     'map-note': { ar: "سيتم التواصل معك من قبل فريقنا لإكمال عملية الدفع والتأكيد.", en: "Our team will contact you to finalize payment and confirmation." },
     'contact-heading-small': { ar: "تواصل معنا مباشرة", en: "Contact Us Directly" },
-    'contact-name-small': { ar: "<strong>المهندسة سهاد الفرطوسي</strong> - المدير التنفيذي", en: "<strong>Eng. Suhad Al-Fartousi</strong> - Executive Director" },
+    'contact-name-small': { ar: "<strong>فريق تيدإكس بغداد</strong>", en: "<strong>TEDxBaghdad Team</strong>" },
     'footer-text': { ar: "© 2025 TEDxBaghdad. كل الحقوق محفوظة.", en: "© 2025 TEDxBaghdad. All rights reserved." },
     'footer-links-global': { ar: "الشبكة العالمية", en: "Global Network" },
     'footer-links-quick': { ar: "روابط سريعة", en: "Quick Links" },
@@ -47,11 +46,10 @@ const elementsToTranslate = {
     'footer-about': { ar: "من نحن", en: "About Us" },
     'footer-packages': { ar: "باقات الشراكة", en: "Partnership Packages" },
     'footer-map-link': { ar: "خارطة البوثات والحجز", en: "Booths Map & Booking" },
-    'footer-director-name': { ar: "المهندسة سهاد الفرطوسي", en: "Eng. Suhad Al-Fartousi" },
+    'footer-director-name': { ar: "فريق تيدإكس بغداد", en: "TEDxBaghdad Team" },
     'gallery-heading': { ar: "صور من فعالياتنا السابقة", en: "Photos from Previous Events" },
     'gallery-subtitle': { ar: "شاهدوا لقطات من مؤتمرات ومعارض TEDxBaghdad عبر السنوات.", en: "View snapshots from TEDxBaghdad conferences and exhibitions over the years." },
 
-    // ترجمات صفحة "من نحن"
     'about-page-title': { ar: "من نحن - TEDxBaghdad", en: "About Us - TEDxBaghdad" },
     'about-hero-title': { ar: "من نحن", en: "About Us" },
     'about-hero-subtitle': { ar: "قصة الأفكار التي تستحق الانتشار في قلب بغداد", en: "The Story of Ideas Worth Spreading in the Heart of Baghdad" },
@@ -83,32 +81,27 @@ const modalContent = {
     }
 };
 
-// بيانات الشركات المحجوزة مع مسارات اللوجو والتفاصيل
 const bookedData = {
     'booth-18': { 
         name: 'Zain Iraq', 
         logo: 'images/zain.jpeg', 
         details: 'شركة زين العراق للاتصالات هي الراعي البلاتيني للحدث.',
-        // 🛑 أضف هذا الحقل 🛑
-        contact_link: 'mailto:zainsales@company.com' // أو رابط موقع الشركة
+        contact_link: 'mailto:zainsales@company.com'
     },
     'booth-10': { 
         name: 'Asiacell', 
         logo: 'images/asiacell.png', 
         details: 'شركة آسياسيل هي الراعي الذهبي وتدعم مبادرات الشباب.',
-        // 🛑 أضف هذا الحقل 🛑
         contact_link: 'https://www.asiacell.com/contact-us' 
     },
     'booth-3': { 
         name: 'Korek', 
         logo: 'images/korek.png', 
         details: 'شركة كورك تيليكوم هي الراعي الذهبي وتدعم مبادرات [الشباب/الابتكار/الرياضة].',
-        // 🛑 أضف هذا الحقل 🛑
         contact_link: 'mailto:sponsorship@korek.com'
     }
 };
 
-// *** القالب الأصلي لـ Modal الحجز (مهم لإعادة التعيين) ***
 function getBookingModalContentHTML(lang) {
     return `
         <div class="modal-header">
@@ -123,7 +116,6 @@ function getBookingModalContentHTML(lang) {
     `;
 }
 
-// --- دوال الترجمة والثيم ---
 
 function translate(lang) {
     for (const id in elementsToTranslate) {
@@ -151,7 +143,6 @@ function translate(lang) {
     currentLang = lang;
     localStorage.setItem('lang', lang);
 
-    // إعادة تشغيل التحديثات للـ Modal إذا كان موجوداً
     if (document.getElementById('map')) {
         setupBookingSystem();
     }
@@ -178,7 +169,6 @@ function toggleTheme() {
     localStorage.setItem('theme', currentTheme);
 }
 
-// ====== نظام الحجز (Booking System) ======
 
 function createModal() {
     let modal = document.getElementById('booth-modal');
@@ -188,13 +178,11 @@ function createModal() {
     modal.id = 'booth-modal';
     modal.className = 'modal';
     
-    // عند الإنشاء، نضع قالب الحجز الأصلي
     const contentHTML = getBookingModalContentHTML(currentLang);
     modal.innerHTML = `<div class="modal-content">${contentHTML}</div>`;
 
     document.body.appendChild(modal);
     
-    // ربط أحداث الإغلاق
     const closeBtn = modal.querySelector('.close-btn');
     if(closeBtn) {
         closeBtn.onclick = () => { modal.style.display = 'none'; };
@@ -224,7 +212,6 @@ function showCompanyDetailsModal(data) {
         `;
     }
     
-    // إظهار المودال
     modal.style.display = 'flex';
 }
 
@@ -232,7 +219,6 @@ function setupBookingSystem() {
     const mapContainer = document.querySelector('.exhibition-map');
     if (!mapContainer) return;
 
-    // 1. تحديث حالة البوثات وتضمين اللوجو
     const booths = document.querySelectorAll('.booth');
     booths.forEach(booth => {
         booth.classList.remove('booked');
@@ -254,7 +240,6 @@ function setupBookingSystem() {
         }
     });
 
-    // تحديث ستايل المحجوز
     let styleTag = document.getElementById('booked-style');
     if (!styleTag) {
         styleTag = document.createElement('style');
@@ -266,26 +251,21 @@ function setupBookingSystem() {
         .ltr-mode .booked::after { content: "${modalContent.en.booked}"; }
     `;
 
-    // 2. تفعيل النقرات (Event Delegation) - الحل لمشكلة التوقف
     mapContainer.onclick = null; 
 
     mapContainer.onclick = function(event) {
         let booth = event.target.closest('.booth');
         if (!booth) return;
 
-        // الحالة 1: البوث محجوز (نفتح مودال التفاصيل)
         if (booth.classList.contains('booked')) {
             const data = bookedData[booth.id];
             showCompanyDetailsModal(data);
         } 
-        // الحالة 2: البوث متاح (نفتح مودال الحجز العادي)
         else {
             let modal = document.getElementById('booth-modal');
             if (!modal) modal = createModal();
 
-            // *** FIX: إعادة تعيين قالب الحجز الأصلي ***
             modal.querySelector('.modal-content').innerHTML = getBookingModalContentHTML(currentLang);
-            // *** End FIX ***
 
             const boothNumber = booth.id.split('-')[1];
             const boothPrice = booth.dataset.price;
@@ -301,7 +281,6 @@ function setupBookingSystem() {
     };
 }
 
-// ====== الكاروسيل (Carousel) ======
 
 const imagePaths = [
     'images/gallery1.jpg',
@@ -373,7 +352,6 @@ function initializeGallery() {
 }
 
 
-// ====== عند التحميل ======
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('lang') || 'ar';
     const savedTheme = localStorage.getItem('theme') || 'light';
