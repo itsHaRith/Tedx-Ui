@@ -1,12 +1,6 @@
-/*
-====================================
-1. الإعدادات العامة والتخطيط الأساسي
-====================================
-*/
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400;700;900&display=swap');
 
 :root {
-    /* الألوان الأساسية */
     --color-ted-red: #E62B1E;
     --color-dark-primary: #121212; 
     --color-dark-secondary: #1f1f1f; 
@@ -14,7 +8,6 @@
     --color-light-secondary: #f8f8f8; 
     --color-text-light: #f4f4f4;
     --color-text-dark: #333333;
-    /* التباعد والمسافات */
     --section-padding: 80px 0;
 }
 
@@ -22,7 +15,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* إضافة انتقال سلس لتغيير الألوان */
     transition: background-color 0.5s, color 0.5s, border-color 0.5s, transform 0.5s;
 }
 
@@ -31,11 +23,6 @@ body {
     line-height: 1.6;
 }
 
-/*
-====================================
-1.1. الوضع الداكن والوضع المضيء
-====================================
-*/
 body.light-mode {
     background-color: var(--color-light-primary);
     color: var(--color-text-dark);
@@ -45,7 +32,7 @@ body.dark-mode {
     background-color: var(--color-dark-primary);
     color: var(--color-text-light);
 }
-/* تعديل ألوان العناصر في الوضع الداكن */
+
 body.dark-mode .section { background-color: var(--color-dark-primary); }
 body.dark-mode .dark-bg { background-color: var(--color-dark-secondary); }
 body.dark-mode h2 { color: var(--color-light-primary); }
@@ -57,22 +44,15 @@ body.dark-mode .package-card {
 body.dark-mode .package-card h3 { color: var(--color-text-light); }
 body.dark-mode footer { background-color: #000; }
 
-/*
-====================================
-1.2. التوجيه (RTL/LTR)
-====================================
-*/
 .rtl-mode { direction: rtl; }
 .ltr-mode { direction: ltr; }
 
-/* تنسيقات عامة */
 a { text-decoration: none; color: var(--color-ted-red); transition: color 0.3s; }
 .section { padding: var(--section-padding); text-align: center; }
 .dark-bg { background-color: var(--color-dark-secondary); color: var(--color-text-light); }
 .red-text { color: var(--color-ted-red); }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* تعديلات الاتجاه في الأقسام */
 .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; max-width: 1000px; margin: 40px auto 0; }
 .rtl-mode .about-grid { text-align: right; }
 .ltr-mode .about-grid { text-align: left; }
@@ -86,11 +66,6 @@ a { text-decoration: none; color: var(--color-ted-red); transition: color 0.3s; 
 .rtl-mode .package-card ul li:before { content: "✔️"; margin-left: 10px; margin-right: 0; color: var(--color-ted-red); }
 .ltr-mode .package-card ul li:before { content: "✔️"; margin-right: 10px; margin-left: 0; color: var(--color-ted-red); }
 
-/*
-====================================
-2. شريط التنقل (Header)
-====================================
-*/
 header {
     background-color: #000;
     color: var(--color-text-light);
@@ -134,7 +109,6 @@ nav ul li a:hover {
     color: var(--color-ted-red);
 }
 
-/* خط أحمر تحت الروابط */
 nav ul li a::after {
     content: '';
     position: absolute;
@@ -150,7 +124,6 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* تنسيق الأزرار (Toggles) */
 .toggles { display: flex; align-items: center; }
 .toggle-btn {
     background: none;
@@ -166,7 +139,6 @@ nav ul li a:hover::after {
 .ltr-mode .toggle-btn { margin-left: 10px; margin-right: 0; }
 .toggle-btn:hover { background-color: var(--color-ted-red); color: var(--color-light-primary); }
 
-/* تنسيق زر 'تواصل معنا' */
 .btn {
     background-color: var(--color-ted-red);
     color: var(--color-light-bg) !important;
@@ -177,14 +149,7 @@ nav ul li a:hover::after {
     margin-left: 15px;
 }
 
-
-/*
-====================================
-3. القسم الرئيسي الترويجي (Hero)
-====================================
-*/
 .hero {
-    /* تغيير التدرج لجعل الخلفية أغمق بكثير لزيادة التباين */
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
                 url('images/style.jpg') no-repeat center center/cover;
     height: 90vh; 
@@ -196,7 +161,7 @@ nav ul li a:hover::after {
     padding: 0 20px;
 }
 
-.hero h1 { display: none; } /* إخفاء h1 الفارغ */
+.hero h1 { display: none; }
 
 .hero h2 {
     font-size: 4.5em;
@@ -232,76 +197,54 @@ nav ul li a:hover::after {
     transform: translateY(-3px); 
 }
 
-/*
-====================================
-3.1. تعديلات الاستجابة للقسم الرئيسي (Responsive Hero)
-====================================
-*/
 @media (max-width: 768px) {
     .hero {
-        height: 80vh; /* تقليل ارتفاع القسم قليلاً */
+        height: 80vh; 
     }
-
     .hero .pre-title {
-        font-size: 0.9em; /* تصغير حجم النص التمهيدي */
+        font-size: 0.9em; 
     }
-
     .hero h2 {
-        font-size: 2.8em; /* تصغير حجم العنوان الرئيسي بشكل كبير */
-        letter-spacing: 2px; /* تقليل المسافة بين الحروف */
+        font-size: 2.8em; 
+        letter-spacing: 2px; 
     }
-
     .event-info span {
-        font-size: 1em; /* تصغير حجم معلومات الحدث */
+        font-size: 1em; 
     }
-
     .hero .btn-primary {
-        font-size: 1em; /* تصغير حجم الخط داخل الزر */
-        padding: 12px 30px; /* تصغير الهوامش الداخلية للزر */
+        font-size: 1em; 
+        padding: 12px 30px; 
         margin-top: 30px;
     }
 }
 
-/*
-====================================
-4. قسم عن المؤتمر (About Section) - التعديل النهائي
-====================================
-*/
 #about {
     padding-bottom: 40px;
-    /* تأكد من أن الخلفية لا تتضارب مع النصوص */
 }
 
 .about-grid {
     display: grid;
-    /* نعتمد على نسبة 1.7:1 (النص أوسع من البطاقة) */
     grid-template-columns: 1.7fr 1fr; 
-    gap: 50px; /* تباعد كبير بين الأعمدة */
+    gap: 50px; 
     text-align: initial;
-    
-    /* 🛑 الحل الجذري: نحدد العرض الأقصى والتوسيط ونضيف Padding للحماية 🛑 */
-    /* هذا التحديد سيتم تطبيقه على div.about-grid مباشرة */
     max-width: 1000px; 
     margin: 40px auto 0; 
-    padding: 0 20px; /* هامش حماية داخلي ثابت على الـ Grid نفسه */
+    padding: 0 20px; 
 }
 
 .text-block p {
     margin-bottom: 15px;
     font-size: 1.1em;
-    line-height: 1.8; /* زيادة المسافة بين السطور */
+    line-height: 1.8; 
     text-align: justify; 
 }
 
-/* 🛑 تصميم بطاقة الأصداء الإعلامية (Callout Box) 🛑 */
 .media-coverage {
     border: 2px solid var(--color-ted-red); 
     padding: 20px;
     border-radius: 8px; 
     background-color: var(--color-light-secondary); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    
-    /* ضمان أن الارتفاع يتبع المحتوى (ضروري) */
     height: fit-content; 
     margin: 0; 
 }
@@ -330,45 +273,27 @@ nav ul li a:hover::after {
     font-weight: 400;
 }
 
-
-/*
-====================================
-التعديل الإضافي على الـ Responsive
-====================================
-*/
 @media (max-width: 992px) {
-    /* ... (تنسيقات أخرى) ... */
-    
     .about-grid {
-        /* 🛑 هنا نحل مشكلة القص في الموبايل والتابلت 🛑 */
-        grid-template-columns: 1fr; /* عمود واحد */
+        grid-template-columns: 1fr; 
         gap: 30px;
         text-align: center;
-        
         display: flex;
-        flex-direction: column; /* البطاقة تنزل للأسفل */
-        
-        /* إزالة الـ max-width ليتمدد الـ Grid ضمن حدود الشاشة */
+        flex-direction: column; 
         max-width: 100%;
         padding: 0 20px; 
     }
-    
     .media-coverage {
-        /* توسيط البطاقة في وضع العمود وتحديد عرضها */
         margin: 20px auto 0; 
         width: 100%; 
-        max-width: 450px; /* تحديد عرض معقول في التابلت لتبدو متوازنة */
+        max-width: 450px; 
         text-align: right; 
     }
     .ltr-mode .media-coverage {
         text-align: left;
     }
 }
-/*
-====================================
-5. قسم الأرقام والإحصائيات (Numbers)
-====================================
-*/
+
 #numbers { padding: 60px 0; }
 .stats-grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; margin: 40px auto; }
 .stat-box {
@@ -385,15 +310,8 @@ nav ul li a:hover::after {
 .demographics { margin-top: 40px; padding: 20px; border: 1px solid var(--color-ted-red); max-width: 600px; margin-left: auto; margin-right: auto; border-radius: 8px; }
 .demographics h3 { color: var(--color-ted-red); margin-bottom: 10px; }
 
-
-/*
-====================================
-6. قسم الباقات (Packages) - تصحيح التضارب
-====================================
-*/
 #packages { background-color: var(--color-light-secondary); }
 
-/* تصحيح: جعل العناوين والنصوص تظهر بوضوح في الوضع الداكن */
 body.dark-mode #packages h2,
 body.dark-mode #packages p {
     color: var(--color-text-light); 
@@ -423,12 +341,6 @@ body.dark-mode #packages p {
 }
 .dark-mode .btn-secondary { background-color: #555; }
 
-
-/*
-====================================
-7. خارطة المعرض الفعلية
-====================================
-*/
 .booth-map-placeholder { height: auto; border: none; background-color: transparent; }
 .exhibition-map {
     display: flex;
@@ -443,7 +355,6 @@ body.dark-mode #packages p {
 }
 .dark-mode .exhibition-map { background-color: #000; border: 5px solid #444; }
 
-/* تأثير التمرير على حاوية الخريطة بأكملها */
 .exhibition-map:hover {
     border-color: var(--color-ted-red);
 }
@@ -475,53 +386,49 @@ body.dark-mode #packages p {
     flex-grow: 1; 
     position: relative;
     overflow: hidden;
-    
-    /* 🛑 الحل: فرض اتجاه اليسار لليمين (LTR) للأرقام داخل البوث */
     direction: ltr;
 }
 .booth:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(230, 43, 30, 0.7); }
 
-/* ألوان البوثات */
 .diamond { background-color: #000000; width: 15%; }
 .gold { background-color: #0080ff; width: 15%; }
 .silver { background-color: #ff0000; width: 10%; } 
-/* البوثات المحجوزة */
+
 .booked {
-    background-color: #1a1a1a !important; /* لون خلفية داكن للبوث المحجوز */
-    cursor: pointer; /* تفعيل النقر */
-    pointer-events: auto !important; /* السماح بتلقي النقرات */
+    background-color: #1a1a1a !important; 
+    cursor: pointer; 
+    pointer-events: auto !important; 
     border: 2px solid var(--color-ted-red);
     color: #ccc;
-    position: relative; /* مهم للـ overlay */
+    position: relative; 
     overflow: hidden;
 }
-/* تفعيل الـ Overlay (كلمة محجوز) */
+
 .booked::after {
-    content: "محجوز"; /* النص سيتم ترجمته عبر JS/CSS */
+    content: "محجوز"; 
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(230, 43, 30, 0.9); /* خلفية حمراء داكنة */
+    background-color: rgba(230, 43, 30, 0.9); 
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2em;
     font-weight: 700;
-    opacity: 0; /* مخفي في الوضع العادي */
+    opacity: 0; 
     transition: opacity 0.3s;
     z-index: 10;
-    pointer-events: none; /* مهم ليمر النقر عبره */
+    pointer-events: none; 
 }
 
-/* الـ Hover Effect */
 .booked:hover .logo-container {
-    opacity: 0; /* إخفاء اللوجو عند التمرير */
+    opacity: 0; 
 }
 .booked:hover::after {
-    opacity: 1; /* إظهار الـ Overlay عند التمرير */
+    opacity: 1; 
 }
 .booked .company-name {
     font-size: 0.6em;
@@ -544,43 +451,33 @@ body.dark-mode #packages p {
     align-items: center;
     padding: 5px;
 }
-/* تنسيق اللوجو */
+
 .booked .company-logo {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
 }
 .booked .booth-number-text {
-    /* إخفاء رقم البوث الافتراضي إذا كان هناك لوجو */
     display: none; 
 }
-/*
-====================================
-8. قسم التواصل (Contact) و Footer - تصحيح التوجيه
-====================================
-*/
+
 .contact-info { 
     max-width: 500px; 
     margin: 40px auto 0; 
     padding: 20px; 
     border: 1px dashed var(--color-ted-red); 
-    text-align: right; /* أساس التوجيه RTL */
+    text-align: right; 
 }
 .ltr-mode .contact-info {
     text-align: left;
 }
-/* تصحيح التوجيه LTR لأرقام الهواتف والإيميلات داخل الحاوية RTL */
+
 .contact-info p span[dir="ltr"],
 .contact-footer-info p {
     direction: ltr;
     display: inline-block;
 }
 
-/*
-====================================
-9. تنسيقات الـ Modal (النافذة المنبثقة)
-====================================
-*/
 .modal {
     display: none; 
     position: fixed; 
@@ -604,7 +501,6 @@ body.dark-mode #packages p {
     border-radius: 10px;
     position: relative;
     text-align: center;
-    /* إضافة تأثير ظهور سلس */
     animation: fadeIn 0.3s ease-out;
 }
 
@@ -625,7 +521,6 @@ body.dark-mode #packages p {
 .rtl-mode .close-btn { left: 15px; right: auto; }
 .ltr-mode .close-btn { right: 15px; left: auto; }
 
-/* تنسيقات رأس المودال الجديدة */
 .modal-header {
     display: flex;
     flex-direction: column;
@@ -657,20 +552,19 @@ body.dark-mode #packages p {
     background-color: var(--color-light-secondary);
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #e0e0e0; /* إضافة إطار خفيف لتمييز المربع */
+    border: 1px solid #e0e0e0; 
 }
 .dark-mode .modal-price {
     background-color: var(--color-dark-primary);
 }
 
-/* تنسيق الزر الجديد الأصغر حجماً */
 .btn-modal {
     display: inline-block;
     background-color: var(--color-ted-red);
     color: var(--color-light-primary);
-    padding: 12px 30px; /* تصغير حجم الزر */
+    padding: 12px 30px; 
     border-radius: 5px;
-    font-size: 1em; /* تصغير حجم الخط */
+    font-size: 1em; 
     font-weight: 700;
     margin-top: 10px;
     transition: background-color 0.3s, transform 0.2s;
@@ -686,24 +580,18 @@ body.dark-mode #packages p {
     margin-top: 20px;
 }
 .dark-mode .modal-note {
-    color: var(--color-text-light); /* تغيير اللون إلى الأبيض في الوضع الداكن */
+    color: var(--color-text-light); 
 }
 
-
-/*
-====================================
-10. الفوتر (Footer)
-====================================
-*/
 footer {
-    background-color: var(--color-dark-primary); /* خلفية سوداء */
+    background-color: var(--color-dark-primary); 
     color: var(--color-text-light);
     padding: 40px 0 10px;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
     text-align: right;
     padding-bottom: 30px;
@@ -717,7 +605,7 @@ footer {
     font-size: 1.3em;
     font-weight: 700;
     margin-bottom: 20px;
-    color: var(--color-ted-red); /* تمييز العناوين باللون الأحمر */
+    color: var(--color-ted-red); 
     border-bottom: 2px solid rgba(230, 43, 30, 0.3);
     padding-bottom: 5px;
 }
@@ -746,14 +634,13 @@ footer {
     font-size: 1em;
 }
 
-/* تنسيق أيقونات التواصل الاجتماعي */
 .social-links {
     margin-top: 20px;
 }
 
 .social-links a {
     font-size: 1.5em;
-    margin-left: 15px; /* تباعد أيقونات RTL */
+    margin-left: 15px; 
     color: var(--color-text-light);
     transition: color 0.3s;
 }
@@ -772,17 +659,6 @@ footer {
     font-size: 0.9em;
 }
 
-
-/*
-====================================
-11. معرض الصور (3-Image Carousel)
-====================================
-*/
-/*
-====================================
-12. معرض الصور (3-Image Carousel) - التعديل للعرض الكامل
-====================================
-*/
 #gallery {
     padding: var(--section-padding) 0;
     background-color: var(--color-light-secondary);
@@ -805,7 +681,7 @@ footer {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 600px; /* ارتفاع ثابت للسكشن */
+    height: 600px; 
     position: relative;
 }
 
@@ -819,43 +695,33 @@ footer {
 }
 
 .carousel-item {
-    /* التغيير الجذري: جعلنا العرض 60% من الشاشة بدلاً من 33% */
-    /* هذا يعطي مساحة للصورة العريضة */
     flex: 0 0 60%; 
     max-width: 60%;
     opacity: 0.5;
-    transform: scale(1); /* نجعل الحجم الأصلي 100% */
+    transform: scale(0.85); 
     box-sizing: border-box;
     cursor: pointer;
     text-align: center;
-    
-    opacity: 0.5;
-    transform: scale(0.85); 
     transition: all 0.5s ease;
     overflow: hidden;
 }
 
 .carousel-item img {
     width: 100%;
-    height: 100%; /* اجعلها تملأ الارتفاع المتاح بالكامل */
-    object-fit: cover; /* تغطية كامل المساحة */
+    height: 100%; 
+    object-fit: cover; 
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    display: block; /* إزالة المسافات الزائدة */
+    display: block;
 }
 
-/* الصورة النشطة */
 .carousel-item.active {
     opacity: 1;
-    transform: scale(1); /* حجم كامل */
+    transform: scale(1); 
     z-index: 10;
-box-shadow: 
-    /* ظل خفيف قريب من الحافة */
-    0 0 10px rgba(230, 43, 30, 0.4), 
-    /* ظل أوسع (Ambient) */
-    0 0 20px rgba(230, 43, 30, 0.2);}
+    box-shadow: 0 0 10px rgba(230, 43, 30, 0.4), 0 0 20px rgba(230, 43, 30, 0.2);
+}
 
-/* أزرار التنقل */
 .nav-btn {
     position: absolute;
     top: 50%;
@@ -884,11 +750,10 @@ box-shadow:
 #prev-btn { left: 5%; }
 #next-btn { right: 5%; }
 
-/* الموبايل */
 @media (max-width: 768px) {
     .carousel-wrapper { height: 400px; }
     .carousel-item { 
-        flex: 0 0 85%; /* في الموبايل تأخذ معظم الشاشة */
+        flex: 0 0 85%; 
         max-width: 85%; 
     }
     .carousel-item img { 
@@ -896,87 +761,53 @@ box-shadow:
         aspect-ratio: 4/3;
     }
 }
-/*
-====================================
-6. قسم الباقات (Packages) - التعديل النهائي لثبات اللون
-====================================
-*/
+
 #packages { 
     background-color: var(--color-light-secondary); 
 }
 
-/* 🛑 التعديل الجذري للوضع الداكن: */
 body.dark-mode #packages {
-    /* الخلفية ستكون داكنة (لتناسب الوضع الداكن) */
     background-color: var(--color-dark-secondary) !important; 
 }
 
 body.dark-mode #packages h2,
 body.dark-mode #packages p {
-    /* هذا سيجبر اللون على البقاء أسود/داكن (كما طلبت) */
     color: var(--color-light-primary) !important; 
 }
 
-/* ملاحظة هامة: بما أن الخلفية داكنة والنص داكن، سيصبح النص غير مرئي (أسود على أسود) */
-/* إذا واجهت مشكلة اختفاء النص، يرجى استبدال var(--color-text-dark) بـ var(--color-ted-red) */
-
-/* ... باقي تنسيقات .package-card تبقى كما هي ... */
-
-
-/*
-** هذا هو التعديل المطلوب لضمان ظهور النص الأبيض في الوضع الداكن **
-*/
 body.dark-mode .company-details-view p {
-    color: var(--color-text-light) !important; /* فرض اللون الأبيض للنصوص */
+    color: var(--color-text-light) !important; 
 }
 
-/* تعديل لون الخلفية الافتراضي في المودال في الوضع الداكن */
 .dark-mode .modal-content { 
     background-color: var(--color-dark-secondary);
 }
-/* تعديل لون خلفية النص نفسه ليظهر أبيض */
 .dark-mode .company-details-view {
     background-color: var(--color-dark-secondary); 
 }
 
-/*
-====================================
-13. تعديلات الاستجابة لشريط التنقل (Responsive Navbar)
-====================================
-*/
 @media (max-width: 768px) {
     header {
-        padding: 10px 15px; /* تقليل الهوامش الداخلية للنافبار */
-        flex-wrap: wrap; /* السماح للعناصر بالالتفاف لسطر جديد إذا لزم الأمر */
-        justify-content: center; /* توسيط العناصر عند الالتفاف */
-        gap: 10px; /* إضافة مسافة صغيرة بين العناصر */
+        padding: 10px 15px; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 10px;
     }
-
     header .logo h1 {
-        font-size: 1.8em; /* تصغير حجم الشعار */
+        font-size: 1.8em; 
     }
-
     nav ul li {
-        margin: 0 8px; /* تقليل المسافة بين روابط القائمة */
+        margin: 0 8px; 
     }
-
     nav ul li a {
-        font-size: 0.9em; /* تصغير حجم خط الروابط */
+        font-size: 0.9em; 
     }
-
     .toggle-btn {
-        padding: 6px 10px; /* تصغير حجم أزرار اللغة والثيم */
+        padding: 6px 10px;
         font-size: 0.9em;
     }
 }
 
-/*
-====================================
-14. تنسيقات صفحة "من نحن" (About Us Page)
-====================================
-*/
-
-/* قسم الهيرو الصغير */
 .hero-small {
     height: 40vh;
     background-size: cover;
@@ -996,7 +827,7 @@ body.dark-mode .company-details-view p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* طبقة معتمة فوق الصورة */
+    background: rgba(0, 0, 0, 0.6); 
 }
 
 .hero-small .hero-content {
@@ -1009,7 +840,6 @@ body.dark-mode .company-details-view p {
     margin-bottom: 10px;
 }
 
-/* قسم المحتوى مع صورة */
 .content-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -1032,7 +862,6 @@ body.dark-mode .company-details-view p {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* قسم فيديوهات يوتيوب */
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1064,7 +893,7 @@ body.dark-mode .company-details-view p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(230, 43, 30, 0.7); /* لون أحمر تيد الشفاف */
+    background: rgba(230, 43, 30, 0.7); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1080,6 +909,6 @@ body.dark-mode .company-details-view p {
 
 @media (max-width: 768px) {
     .content-grid {
-        grid-template-columns: 1fr; /* عمود واحد في الموبايل */
+        grid-template-columns: 1fr; 
     }
 }
